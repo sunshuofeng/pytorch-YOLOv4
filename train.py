@@ -561,7 +561,7 @@ def get_args(**kwargs):
     cfg.update(args)
     
     file = open('test.json','w',encoding='utf-8')
-    json.dump(edict(cfg),file)
+    json.dump(cfg,file)
     file.close()
     return edict(cfg)
 
