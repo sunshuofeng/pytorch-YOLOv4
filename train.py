@@ -36,7 +36,7 @@ from tool.darknet2pytorch import Darknet
 from tool.tv_reference.utils import collate_fn as val_collate
 from tool.tv_reference.coco_utils import convert_to_coco_api
 from tool.tv_reference.coco_eval import CocoEvaluator
-
+import json
 
 def bboxes_iou(bboxes_a, bboxes_b, xyxy=True, GIoU=False, DIoU=False, CIoU=False):
     """Calculate the Intersection of Unions (IoUs) between bounding boxes.
@@ -559,7 +559,10 @@ def get_args(**kwargs):
     # for k in args.keys():
     #     cfg[k] = args.get(k)
     cfg.update(args)
-
+    
+    file = open('test.json','w',encoding='utf-8')
+    json.dump(edict(cfg),file)
+    file.close()
     return edict(cfg)
 
 
