@@ -54,8 +54,8 @@ Cfg.blur = 0
 Cfg.gaussian = 0
 Cfg.boxes = 60  # box num
 Cfg.TRAIN_EPOCHS = 300
-Cfg.train_label = 'train.txt
-Cfg.val_label = 'val.txt
+Cfg.train_label = 'train.txt'
+Cfg.val_label = 'val.txt'
 Cfg.TRAIN_OPTIMIZER = 'adam'
 '''
 image_path1 x1,y1,x2,y2,id x1,y1,x2,y2,id x1,y1,x2,y2,id ...
